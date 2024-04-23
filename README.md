@@ -13,7 +13,7 @@ import { SymbolOptions, ms, app6d } from 'milsymbol';
 ms.addIcons(app6d);
 
 let symOptions: SymbolOptions = {
-  sidc: "sfgpewrh--mt"
+  sidc: "sfgpewrh--mt",
   size: 35,
   quantity: '200',
   staffComments: "for reinforcements".toUpperCase(),

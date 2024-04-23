@@ -6,17 +6,25 @@ Milsymbol is a small library in pure javascript that creates military unit symbo
 
 ![Figure 13](https://github.com/spatialillusions/milsymbol/blob/master/docs/images/milsymbol.png?raw=true)
 
-```javascript
-new ms.Symbol("sfgpewrh--mt", {
+Adapted usage in Typescript:
+```typescript
+import { SymbolOptions, ms, app6d } from 'milsymbol';
+
+ms.addIcons(app6d);
+
+let symOptions: SymbolOptions = {
+  sidc: "sfgpewrh--mt"
   size: 35,
-  quantity: 200,
+  quantity: '200',
   staffComments: "for reinforcements".toUpperCase(),
   additionalInformation: "added support for JJ".toUpperCase(),
-  direction: (750 * 360) / 6400,
+  direction: String((750 * 360) / 6400),
   type: "machine gun".toUpperCase(),
   dtg: "30140000ZSEP97",
   location: "0900000.0E570306.0N"
-}).asSVG();
+}
+
+new ms.Symbol(symOptions).asSVG();
 ```
 
 Compared to reference figure from MIL-STD-2525C:
@@ -55,8 +63,11 @@ http://spatialillusions.com/milsymbol/
 
 ## Getting started
 
-You can download [milsymbol from GitHub](https://github.com/spatialillusions/milsymbol "milsymbol"), or install it using npm:
-`npm install milsymbol`
+You can download [milsymbolES6 from GitHub](https://github.com/PTriebold/milsymbolES6 "milsymbol"), or install it using npm:
+`npm install https://github.com/PTriebold/milsymbolES6.git`
+
+First you have to add the needed Icons:
+`ms.addIcons(app6d)`
 
 To create your first symbol you use the symbol method to create a symbol object:
 

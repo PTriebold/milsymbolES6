@@ -25,6 +25,7 @@ type SymbolOptions = {
   fill?: boolean;
   fillColor?: string;
   fillOpacity?: number;
+  fixedWidth?: number;
   fontfamily?: string;
   frame?: boolean;
   frameColor?: ColorMode;

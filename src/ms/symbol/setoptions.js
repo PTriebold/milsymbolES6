@@ -119,7 +119,11 @@ export default function setOptions() {
     Number(this.style.strokeWidth * 2) +
     Number(this.style.outlineWidth * 2); //Adding the stoke width as margins and a little bit extra
 
-  this.width = (this.baseWidth * this.style.size) / 100;
+  if (this.style.fixedWidth){
+    this.width =  this.style.fixedWidth;
+  } else {
+    this.width = (this.baseWidth * this.style.size) / 100;
+  }
   this.height = (this.baseHeight * this.style.size) / 100;
 
   this.symbolAnchor = {
